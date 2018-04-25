@@ -77,7 +77,7 @@ public static void main(String[] args)
 			out.print("Enter the final position (in meters):");
 			f1nal = input.nextDouble();
 			//Check to see if user entered the correct final position
-			out.println("You entered: " + final + " m. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
+			out.println("You entered: " + f1nal + " m. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
 			f1nal = input.next(".").charAt(0);;
 			if(response == 'y'){
 			   out.println("final position is correct");
