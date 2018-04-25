@@ -2,13 +2,14 @@ import java.util.*;
 import java.io.*;
 public class Physics {
   
- public static void main(String[] args)
- {
+  public static void main(String[] args)
+ { 
   Formulas f = new Formulas();
   PrintStream out = System.out;
   InputStream in = System.in;
   Scanner input = new Scanner(in);
   int answer;
+  char response;
   double mass, acceleration, initial, f1nal, totalDistance, totalTime, totalDisplacement, timeInterval, averageAcceleration, initialVelocity,
          time, finalVelocity, initialTime, finalTime, xComponent, yComponent, magnitude, angle, displacement, averageVelocity;
   
@@ -17,21 +18,30 @@ public class Physics {
   //List options
   out.print("----(Type in the # )----\n 1. Force\n 2. Displacement\n 3. Time Interval\n 4. Average Speed\n 5. Average Velocity\n 6.Average Acceleration\n" +
 	    " 7.Average Acceleration\n 8. Velocity as a function of time\n 9. Displacement as a function of time\n 10. Velocity Squared\n" +
-	    "11. Magnitude\n 12. X Component\n 13. Y Component\n 14. Angle\n 15. "+ "\n\n");
+	    " 11. Magnitude\n 12. X Component\n 13. Y Component\n 14. Angle\n 15. "+ "\n\n");
   //enter an answer
   answer = input.nextInt();
   if(answer == 1){
   	try{
-  		out.print("You chose a problem with Force:");
+  		out.println("You chose a problem with Force:");
 		//If the user knows the mass then enter the mass
-		out.print("Enter the mass (in kilograms):");
+		out.println("Enter the mass (in kilograms):");
 		mass = input.nextDouble();
-		out.print("Enter the acceleration (in meters per second squared)");
+        out.println("You entered: " + mass + " kg. Is this correct?\nif yes press 'y' and enter. if no press 'n' and enter");
+        response = input.next(".").charAt(0);;
+        if(response == 'y'){
+           out.println("mass is correct");
+        }
+        else{
+            out.println("enter the corrected mass");
+           
+        }
+		out.println("Enter the acceleration (in meters per second squared)");
 		acceleration = input.nextDouble();
-		out.print("Wait while I compute your answer .... " );
+		out.println("Wait while I compute your answer .... " );
 		Thread.sleep(2000);
-		out.print("The force is " + f.force(mass, acceleration) + " m/s^2");
-		out.print("The force is an interaction between objects that causes them to change motion. The formula for force states that force is equal to mass multipled by acceleration. So when you opened your locker door, your hand applies a force to the door, causing it to change its motion. We measure force in newtons (N), the scientific unit for measuring weight.");
+		out.println("The force is " + f.force(mass, acceleration) + " m/s^2");
+		out.println("The force is an interaction between objects that causes them to change motion. The formula for force states that force is equal to mass multipled by acceleration. So when you opened your locker door, your hand applies a force to the door, causing it to change its motion. We measure force in newtons (N), the scientific unit for measuring weight.");
 		}
 	catch(InterruptedException e) {
 		e.printStackTrace();
@@ -164,16 +174,16 @@ public class Physics {
          
  	else if(answer == 9){
 		try{
-			out.print("You chose a problem with the displacement as a function of time");
-			out.print("Enter the intial velocity (in meters per second):");
+			out.println("You chose a problem with the displacement as a function of time");
+			out.println("Enter the intial velocity (in meters per second):");
 			initialVelocity = input.nextDouble();
-			out.print("Enter the accleration (in meters per second squared):");
+			out.println("Enter the accleration (in meters per second squared):");
 			acceleration = input.nextDouble();
-			out.print("Enter the time (in seconds):");
+			out.println("Enter the time (in seconds):");
                         time = input.nextDouble();
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The displacement as a function of time is " + f.displacement(initialVelocity, acceleration, time) + " m");
+			out.println("The displacement as a function of time is " + f.displacement(initialVelocity, acceleration, time) + " m");
 			
 		}
 	catch(InterruptedException e) {
@@ -260,7 +270,8 @@ public class Physics {
 			e.printStackTrace();
 		}
 	}
-		
+  out.print("\n");
+
   out.print("Hello world!");
   out.print(f.force(142.0, 2.2));
   input.close();
