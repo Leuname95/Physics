@@ -16,7 +16,7 @@ public class Physics {
   out.print("What kind of problem do you need help with");  
   //List options
   out.print("----(Type in the # )----\n 1. Force\n 2. Displacement\n 3. Time Interval\n 4. Average Speed\n 5. Average Velocity\n 6.Average Acceleration\n" +
-	    " 7.Average Acceleration\n 8. Velocity as a function of time\n 9. Displacement as a function of time\n 10. Velocity Squared\n +
+	    " 7.Average Acceleration\n 8. Velocity as a function of time\n 9. Displacement as a function of time\n 10. Velocity Squared\n" +
 	    "11. Magnitude\n 12. X Component\n 13. Y Component\n 14. Angle\n 15. "+ "\n\n");
   //enter an answer
   answer = input.nextInt();
@@ -71,7 +71,6 @@ public class Physics {
 			e.printStackTrace();
 		}
 	}
-
 	else if(answer == 4){
 		try{
 			out.print("You chose a problem with the Average Speed");
@@ -194,7 +193,7 @@ public class Physics {
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.print("The velocity squared as a function of time is " + f.velocity(initialVelocity, acceleration, displacement) + " m/s");
-			
+        }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -210,7 +209,7 @@ public class Physics {
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.print("The magnitude obtained from the x and y component is " + f.magnitude(xComponent, yComponent) + "");
-			
+        }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -226,12 +225,11 @@ public class Physics {
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.print("The x component obtained from the magnitude and angle is " + f.xComponent(magnitude, angle) + " x^");
-			
+        }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-
   	else if(answer == 13){
 		try{
 			out.print("You chose a problem with the yComponent ");
@@ -242,12 +240,11 @@ public class Physics {
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.print("The y component obtained from the magnitude and angle is " + f.yComponent(magnitude, angle) + " y^");
-			
+        }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-
   	else if(answer == 14){
 		try{
 			out.print("You chose a problem with the angle ");
@@ -258,7 +255,7 @@ public class Physics {
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.print("The angle obtained from the x and y component is " + f.angle(xComponent, yComponent) + " degrees");
-			
+        }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -268,5 +265,4 @@ public class Physics {
   out.print(f.force(142.0, 2.2));
   input.close();
  }
-
 }
