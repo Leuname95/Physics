@@ -161,8 +161,8 @@ public static void main(String[] args)
 			}
 			out.print("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The average speed is " + f.averageSpeed(totalDistance, totalTime) + " m/s");
-			out.print("The average speed of an object over a given time interval is the total distance traveled divided by the total time elapsed");
+			out.println("The average speed is " + f.averageSpeed(totalDistance, totalTime) + " m/s");
+			out.println("The average speed of an object over a given time interval is the total distance traveled divided by the total time elapsed");
 		}
 	catch(InterruptedException e) {
 			e.printStackTrace();
@@ -171,7 +171,7 @@ public static void main(String[] args)
 	
 	else if(answer == 5){
 		try{
-			out.print("You chose a problem with the Average Velocity");
+			out.println("You chose a problem with the Average Velocity");
 			System.out.println("Enter the total displacement (in meters) :");
 			totalDisplacement = input.nextDouble();
 			//Check to see if user entered the correct total displacement
@@ -184,7 +184,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected mass");
 			  totalDisplacement = input.nextDouble();
 			}
-			out.print("Enter the time interval (in seconds):");
+			out.println("Enter the time interval (in seconds):");
 			timeInterval = input.nextDouble();
 			//Check to see if user entered the correct time interval
 			out.println("You entered: " + timeInterval + " s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -245,7 +245,7 @@ public static void main(String[] args)
          
 	else if(answer == 7){
 		try{
-			out.print("You chose a problem with the Average Acceleration");
+			out.println("You chose a problem with the Average Acceleration");
 			System.out.println("Enter the initial velocity (in meters per second):");
 			initialVelocity = input.nextDouble();
 			//Check to see if user entered the correct initial velocity
@@ -258,7 +258,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected initial velocity");
 		  	initialVelocity = input.nextDouble();
 			}
-                        out.print("Enter the final velocity (in seconds):");
+                        out.println("Enter the final velocity (in seconds):");
                         finalVelocity = input.nextDouble();
 			//Check to see if user entered the final velocity
 			out.println("You entered: " + finalVelocity + " m/s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -270,7 +270,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected final velocity");
 			  finalVelocity = input.nextDouble();
 			}
-			out.print("Enter the initial time (in seconds):");
+			out.println("Enter the initial time (in seconds):");
 			initialTime = input.nextDouble();
 			//Check to see if user entered the correct initial time
 			out.println("You entered: " + initialTime + " s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -282,7 +282,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected initial time");
 		  	initialTime = input.nextDouble();
 			}
-                        out.print("Enter the final time (in seconds):");
+                        out.println("Enter the final time (in seconds):");
                         finalTime = input.nextDouble();
 			//Check to see if user entered the correct final time
 			out.println("You entered: " + finalTime + " s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -294,10 +294,10 @@ public static void main(String[] args)
 			  out.println("enter the corrected final time");
 			  finalTime = input.nextDouble();
 			}
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The average acceleration is " + f.averageAcceleration(initialVelocity, initialTime, finalVelocity, finalTime) + " m/s^2");
-			out.print("The average acceleration (a bar) during a time interval (delta t) is the change in velocity (delta v) divided by (delta t)");
+			out.println("The average acceleration is " + f.averageAcceleration(initialVelocity, initialTime, finalVelocity, finalTime) + " m/s^2");
+			out.printlnl("The average acceleration (a bar) during a time interval (delta t) is the change in velocity (delta v) divided by (delta t)");
 		}
 	catch(InterruptedException e) {
 			e.printStackTrace();
@@ -306,8 +306,8 @@ public static void main(String[] args)
          
 	else if(answer == 8){
 		try{
-			out.print("You chose a problem with the Velocity as a function of time");
-			out.print("Enter the intial velocity (in meters per second):");
+			out.println("You chose a problem with the Velocity as a function of time");
+			out.println("Enter the intial velocity (in meters per second):");
 			initialVelocity = input.nextDouble();
 			//Check to see if user entered the correct initial velocity
 			out.println("You entered: " + initalVelocity + " m/s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -319,7 +319,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected initial velocity");
 			  initialVelocity = input.nextDouble();
 			}
-			out.print("Enter the accleration (in meters per second squared):");
+			out.println("Enter the accleration (in meters per second squared):");
 			acceleration = input.nextDouble();
 			//Check to see if user entered the correct acceleration
 			out.println("You entered: " + acceleration + " m/s^s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -331,7 +331,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected accleration");
 		  	acceleration = input.nextDouble();
 			}
-			out.print("Enter the time (in seconds):");
+			out.println("Enter the time (in seconds):");
                         time = input.nextDouble();
 			//Check to see if user entered the correct time
 			out.println("You entered: " + time + " s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -343,9 +343,9 @@ public static void main(String[] args)
 			  out.println("enter the corrected time");
 			  time = input.nextDouble();
 			}
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The velocity as a function of time is " + f.velocity(initialVelocity, acceleration, time) + " m/s");
+			out.println("The velocity as a function of time is " + f.velocity(initialVelocity, acceleration, time) + " m/s");
 			
 		}
 	catch(InterruptedException e) {
@@ -417,7 +417,7 @@ public static void main(String[] args)
 		  	out.println("enter the corrected initial velocity");
 	  		initialVelocity = input.nextDouble();
 			}
-			out.print("Enter the accleration (in meters per second squared):");
+			out.println("Enter the accleration (in meters per second squared):");
 			acceleration = input.nextDouble();
 			//Check to see if user entered the correct acceleration 
 			out.println("You entered: " + acceleration + " m/s^2. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -488,8 +488,8 @@ public static void main(String[] args)
   
   	else if(answer == 12){
 		try{
-			out.print("You chose a problem with the xComponent ");
-			out.print("Enter the magnitude:");
+			out.println("You chose a problem with the xComponent ");
+			out.println("Enter the magnitude:");
 			magnitude = input.nextDouble();
 			//Check to see if user entered the correct magnitude
 			out.println("You entered: " + magnitude + " . \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -501,7 +501,7 @@ public static void main(String[] args)
 	  		out.println("enter the corrected magnitude");
 	  		magnitude = input.nextDouble();
 			}
-			out.print("Enter the angle:");
+			out.println("Enter the angle:");
 			angle = input.nextDouble();
 			//Check to see if user entered the correct angle
 			out.println("You entered: " + angle + " degrees. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -513,9 +513,9 @@ public static void main(String[] args)
 	  		out.println("enter the corrected angle");
 	  		angle = input.nextDouble();
 			}
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The x component obtained from the magnitude and angle is " + f.xComponent(magnitude, angle) + " x^");
+			out.println("The x component obtained from the magnitude and angle is " + f.xComponent(magnitude, angle) + " x^");
         }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
@@ -523,8 +523,8 @@ public static void main(String[] args)
 	}
   	else if(answer == 13){
 		try{
-			out.print("You chose a problem with the yComponent ");
-			out.print("Enter the magnitude:");
+			out.println("You chose a problem with the yComponent ");
+			out.println("Enter the magnitude:");
 			magnitude = input.nextDouble();
 			//Check to see if user entered the correct magnitude
 			out.println("You entered: " + magnitude + " . \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -536,7 +536,7 @@ public static void main(String[] args)
 	  		out.println("enter the corrected magnitude");
 	  		magnitude = input.nextDouble();
 			}
-			out.print("Enter the angle:");
+			out.println("Enter the angle:");
 			angle = input.nextDouble();
 			//Check to see if user entered the correct angle
 			out.println("You entered: " + angle + " degrees. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -548,9 +548,9 @@ public static void main(String[] args)
 		  	out.println("enter the corrected angle");
 		  	angle = input.nextDouble();
 			}
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The y component obtained from the magnitude and angle is " + f.yComponent(magnitude, angle) + " y^");
+			out.println("The y component obtained from the magnitude and angle is " + f.yComponent(magnitude, angle) + " y^");
         }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
@@ -558,8 +558,8 @@ public static void main(String[] args)
 	}
   	else if(answer == 14){
 		try{
-			out.print("You chose a problem with the angle ");
-			out.print("Enter the x component:");
+			out.println("You chose a problem with the angle ");
+			out.println("Enter the x component:");
 			xComponent = input.nextDouble();
 			//Check to see if user entered the correct x component
 			out.println("You entered: " + xComponent + " x^. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -571,7 +571,7 @@ public static void main(String[] args)
 	  		out.println("enter the corrected x component");
 	  		xComponent = input.nextDouble();
 			}
-			out.print("Enter the y component:");
+			out.println("Enter the y component:");
 			yComponent = input.nextDouble();
 			//Check to see if user entered the correct y component
 			out.println("You entered: " + yComponent + " y^. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
@@ -583,18 +583,18 @@ public static void main(String[] args)
 			  out.println("enter the corrected y component");
 			  yComponent = input.nextDouble();
 			}
-			out.print("Wait while I compute your answer .... ");
+			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
-			out.print("The angle obtained from the x and y component is " + f.angle(xComponent, yComponent) + " degrees");
+			out.println("The angle obtained from the x and y component is " + f.angle(xComponent, yComponent) + " degrees");
         }	
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-  out.print("\n");
+  out.println("\n");
 
-  out.print("Hello world!");
-  out.print(f.force(142.0, 2.2));
+  out.println("Hello world!");
+  out.println(f.force(142.0, 2.2));
   input.close();
  }
 }
