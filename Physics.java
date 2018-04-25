@@ -2,6 +2,8 @@ import java.util.*;
 import java.io.*;
 public class Physics {
   
+public class Physics {
+  
 public static void main(String[] args)
  { 
   Formulas f = new Formulas();
@@ -297,7 +299,7 @@ public static void main(String[] args)
 			out.println("Wait while I compute your answer .... ");
 			Thread.sleep(2000);
 			out.println("The average acceleration is " + f.averageAcceleration(initialVelocity, initialTime, finalVelocity, finalTime) + " m/s^2");
-			out.printlnl("The average acceleration (a bar) during a time interval (delta t) is the change in velocity (delta v) divided by (delta t)");
+			out.println("The average acceleration (a bar) during a time interval (delta t) is the change in velocity (delta v) divided by (delta t)");
 		}
 	catch(InterruptedException e) {
 			e.printStackTrace();
@@ -310,7 +312,7 @@ public static void main(String[] args)
 			out.println("Enter the intial velocity (in meters per second):");
 			initialVelocity = input.nextDouble();
 			//Check to see if user entered the correct initial velocity
-			out.println("You entered: " + initalVelocity + " m/s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
+			out.println("You entered: " + initialVelocity + " m/s. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
 			response = input.next(".").charAt(0);;
 			if(response == 'y'){
 			   out.println("initial velocity is correct");
