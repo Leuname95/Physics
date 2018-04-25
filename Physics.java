@@ -27,17 +27,29 @@ public class Physics {
 		//If the user knows the mass then enter the mass
 		out.println("Enter the mass (in kilograms):");
 		mass = input.nextDouble();
-        out.println("You entered: " + mass + " kg. Is this correct?\nif yes press 'y' and enter. if no press 'n' and enter");
+        //Check to see if user entered the correct mass
+        out.println("You entered: " + mass + " kg. \nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
         response = input.next(".").charAt(0);;
         if(response == 'y'){
            out.println("mass is correct");
         }
         else{
             out.println("enter the corrected mass");
+            mass = input.nextDouble();
            
         }
 		out.println("Enter the acceleration (in meters per second squared)");
 		acceleration = input.nextDouble();
+        //Check to see if user entered the correct acceleration
+        out.println("You entered: " + acceleration + " m/s^2.\nIs this correct?\nIf yes press 'y' and enter. if no press 'n' and enter");
+        response = input.next(".").charAt(0);;
+        if(response == 'y'){
+           out.println("acceleration is correct");
+        }
+        else{
+            out.println("enter the corrected acceleration");
+            acceleration = input.nextDouble();
+        }
 		out.println("Wait while I compute your answer .... " );
 		Thread.sleep(2000);
 		out.println("The force is " + f.force(mass, acceleration) + " m/s^2");
