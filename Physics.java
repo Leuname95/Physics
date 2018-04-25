@@ -10,7 +10,7 @@ public class Physics {
   Scanner input = new Scanner(in);
   int answer;
   double mass, acceleration, initial, f1nal, totalDistance, totalTime, totalDisplacement, timeInterval, averageAcceleration, initialVelocity,
-         time, finalVelocity, initialTime, finalTime, xComponent, yComponent, magnitude, angle;
+         time, finalVelocity, initialTime, finalTime, xComponent, yComponent, magnitude, angle, displacement, averageVelocity;
   
   //Ask user what kind of problem they wish to solve
   out.print("What kind of problem do you need help with");  
