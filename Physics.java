@@ -10,7 +10,7 @@ public class Physics {
   Scanner input = new Scanner(in);
   int answer;
   double mass, acceleration, initial, f1nal, totalDistance, totalTime, totalDisplacement, timeInterval, averageAcceleration, initialVelocity,
-         time, finalVelocity, initialTime, finalTime;
+         time, finalVelocity, initialTime, finalTime, xComponent, yComponent, magnitude, angle;
   
   //Ask user what kind of problem they wish to solve
   out.print("What kind of problem do you need help with");  
@@ -196,9 +196,72 @@ public class Physics {
 	catch(InterruptedException e) {
 			e.printStackTrace();
 		}
-	}         
-         
-         
+	} 
+		
+  	else if(answer == 11){
+		try{
+			out.print("You chose a problem with the magnitude ");
+			out.print("Enter the x component:");
+			xComponent = input.nextDouble();
+			out.print("Enter the y component:");
+			yComponent = input.nextDouble();
+			out.print("Wait while I compute your answer .... ");
+			Thread.sleep(2000);
+			out.print("The magnitude obtained from the x and y component is " + f.magnitude(xComponent, yComponent) + "");
+			
+	catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}        
+  
+  	else if(answer == 12){
+		try{
+			out.print("You chose a problem with the xComponent ");
+			out.print("Enter the magnitude:");
+			magnitude = input.nextDouble();
+			out.print("Enter the angle:");
+			angle = input.nextDouble();
+			out.print("Wait while I compute your answer .... ");
+			Thread.sleep(2000);
+			out.print("The x component obtained from the magnitude and angle is " + f.xComponent(magnitude, angle) + " x^");
+			
+	catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+  	else if(answer == 13){
+		try{
+			out.print("You chose a problem with the yComponent ");
+			out.print("Enter the magnitude:");
+			magnitude = input.nextDouble();
+			out.print("Enter the angle:");
+			angle = input.nextDouble();
+			out.print("Wait while I compute your answer .... ");
+			Thread.sleep(2000);
+			out.print("The y component obtained from the magnitude and angle is " + f.yComponent(magnitude, angle) + " y^");
+			
+	catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+  	else if(answer == 14){
+		try{
+			out.print("You chose a problem with the angle ");
+			out.print("Enter the x component:");
+			xComponent = input.nextDouble();
+			out.print("Enter the y component:");
+			yComponent = input.nextDouble();
+			out.print("Wait while I compute your answer .... ");
+			Thread.sleep(2000);
+			out.print("The angle obtained from the x and y component is " + f.angle(xComponent, yComponent) + " degrees");
+			
+	catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+		
   out.print("Hello world!");
   out.print(f.force(142.0, 2.2));
   input.close();
