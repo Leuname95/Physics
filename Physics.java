@@ -15,7 +15,9 @@ public class Physics {
   //Ask user what kind of problem they wish to solve
   out.print("What kind of problem do you need help with");  
   //List options
-  out.print("----(Type in the # )----\n 1. Force\n 2. Displacement\n 3. Time Interval\n 4. Average Speed\n 5. Average Velocity\n 6. "+ "\n\n");
+  out.print("----(Type in the # )----\n 1. Force\n 2. Displacement\n 3. Time Interval\n 4. Average Speed\n 5. Average Velocity\n 6.Average Acceleration\n" +
+	    " 7.Average Acceleration\n 8. Velocity as a function of time\n 9. Displacement as a function of time\n 10. Velocity Squared\n +
+	    "11. Magnitude\n 12. X Component\n 13. Y Component\n 14. Angle\n 15. "+ "\n\n");
   //enter an answer
   answer = input.nextInt();
   if(answer == 1){
